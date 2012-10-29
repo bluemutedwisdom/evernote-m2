@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.evernote</groupId>
+  <artifactId>en-thrift</artifactId>
+  <name>Evernote Service Thrift API and generated sources</name>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+	        <excludes>
+	            <exclude>com/evernote/edam/internal/**</exclude>
+	            <exclude>com/evernote/edam/sharing/**</exclude>
+				<exclude>com/evernote/edam/business/**</exclude>
+	            <exclude>org/apache/thrift/**</exclude>
+	        </excludes>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>      
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <inherited>true</inherited>
+        <groupId>org.apache.maven.plugins</groupId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+	        <configuration>
+			<excludes>
+	            <exclude>com/evernote/edam/internal/**</exclude>
+	            <exclude>com/evernote/edam/sharing/**</exclude>
+				<exclude>com/evernote/edam/business/**</exclude>
+	            <exclude>org/apache/thrift/**</exclude>
+	        </excludes>
+	        </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache</groupId>
+      <artifactId>libthrift</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+	  <repository>
+		<id>evernote-m2-snapshots</id>
+		<url>https://github.com/evernote/evernote-m2/raw/master/snapshots</url>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
+  </repositories>
+</project>
