@@ -6,19 +6,21 @@ Include in your pom for acess to
  * lib-thrift
  * en-thrift
 
-<repositories>
-    <repository>
-        <id>evernote-m2-releases</id>
-        <url>https://github.com/evernote/evernote-m2/raw/master/releases</url>
-    </repository>
-    <repository>
-        <id>evernote-m2-snapshots</id>
-        <url>https://github.com/evernote/evernote-m2/raw/master/snapshots</url>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-</repositories>
+```xml
+	<repositories>
+	    <repository>
+	        <id>evernote-m2-releases</id>
+	        <url>https://github.com/evernote/evernote-m2/raw/master/releases</url>
+	    </repository>
+	    <repository>
+	        <id>evernote-m2-snapshots</id>
+	        <url>https://github.com/evernote/evernote-m2/raw/master/snapshots</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+````
 
 License
 =======
