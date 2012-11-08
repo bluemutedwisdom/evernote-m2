@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.evernote</groupId>
-  <artifactId>android-sdk</artifactId>
+  <artifactId>sample-parent</artifactId>
   <versioning>
     <release>1.0</release>
     <versions>
