@@ -2,9 +2,9 @@ evernote-m2
 ===========
 
 Include in your pom for acess to 
-*Evernote-Android-SDK
-*lib-thrift
-*en-thrift
+ * Evernote-Android-SDK
+ * lib-thrift
+ * en-thrift
 
 <repositories>
     <repository>
